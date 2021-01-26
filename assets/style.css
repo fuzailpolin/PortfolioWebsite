@@ -38,7 +38,7 @@
     color: #fff;
     font-size: 35px;
     font-weight: 600;
-} 
+}
 
 .navbar .logo a span{
     color: crimson;
@@ -67,6 +67,15 @@
 
 .navbar.sticky .menu li a:hover{
     color: crimson;
+}
+
+/* menu button style */
+
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
 }
 
 /* home section style */
@@ -102,4 +111,41 @@
 .home .home-content .text-3 span{
     color: crimson;
     font-weight: 500;
+}
+
+/* responsive display style */
+
+@media (max-width: 947px){
+    .max-width{
+        padding: 0 50px;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active::before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #1a1a1d;
+        text-align: center;
+        padding-top: 80px;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px;
+        font-size: 25px;
+    }
 }
