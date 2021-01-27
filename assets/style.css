@@ -123,6 +123,7 @@
     margin-top: 20px;
     border-radius: 2px;
     border: 2px solid crimson;
+    transition: all 0.3s ease;
 }
 
 .home .home-content a:hover{
@@ -173,6 +174,17 @@ section{
     transform: translateX(-50%);
 }
 
+.about .about-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-content .left{
+    width: 45%;
+}
+
 .about .about-content .left img{
     height: 400px;
     width: 400px;
@@ -180,11 +192,55 @@ section{
     border-radius: 6px;
 }
 
+.about .about-content .right{
+    width: 55%;
+}
+
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about-content .right .text span{
+    color: crimson;
+}
+
+.about .about-content .right p{
+    text-align: justify;
+}
+
+.about .about-content .right a{
+    display: inline-block;
+    background: crimson;
+    color: rgb(250, 250, 250);
+    font-size: 18px;
+    padding: 5px 20px;
+    margin-top: 20px;
+    border-radius: 3px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover{
+    color: crimson;
+    background: none;
+}
+
+
+
 /* responsive display style */
 
-@media (max-width: 1104px){
+@media (max-width: 1300px){
     .home .max-width{
         margin-left: 0px;
+    }
+}
+
+@media (max-width: 1104px){
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
     }
 }
 
@@ -238,12 +294,32 @@ section{
         font-size: 23px;
         padding: 10px 30px;
     }
+
+    .max-width{
+        max-width: 800px;
+    }
+
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
 }
 
 @media (max-width: 690px){
     .max-width{
         padding: 0 23px;
     
+    }
+    .about .about-content .left img{
+        height: 300px;
+        width: 300px;
     }
     .home .home-content .text-2{
         font-size: 60px;
