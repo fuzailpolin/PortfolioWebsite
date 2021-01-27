@@ -168,24 +168,27 @@ section .title::after{
     background: none;
 }
 
-/* about section style */
 
-.about, .service, .skill{
+/* this below is used for all the content so we are using same for all */
+
+.about, .service, .skill, .contact{
     font-family: 'Poppins', sans-serif;
 }
-.about .title::after{
-    content: "Who am I";
-}
-
-.about .about-content, 
+.about .about-content,
 .service .serv-content,
-.skill .skill-content{
+.skill .skill-content,
+.contact .contact-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
 
+/* about section style */
+
+.about .title::after{
+    content: "Who am I";
+}
 .about .about-content .left{
     width: 45%;
 }
@@ -359,6 +362,102 @@ section .title::after{
 }
 
 
+/* contact section style */
+
+.contact .title::after{
+    content: "get in touch";
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: rgb(148, 135, 148);
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+    color: black;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+} 
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .email{
+    margin-left: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button{
+    height: 47px;
+    width: 150px;
+}
+.contact .right form .button button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid crimson;
+    background: crimson;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contact .right form .button button:hover{
+    background: white;
+    color: crimson;
+}
+
+
+
+
+
 
 /* responsive display style */
 
@@ -378,7 +477,7 @@ section .title::after{
 @media (max-width: 991px){
     .max-width{
         padding: 0 50px;
-    
+
     }
 }
 
@@ -445,7 +544,8 @@ section .title::after{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
-    .skill .skill-content .column{
+    .skill .skill-content .column,
+    .contact .contact-content .column{
         width: 100%;
         margin-bottom: 30px;
     }
@@ -454,7 +554,7 @@ section .title::after{
 @media (max-width: 690px){
     .max-width{
         padding: 0 23px;
-    
+
     }
     .about .about-content .left img{
         height: 300px;
@@ -467,9 +567,16 @@ section .title::after{
         font-size: 32px;
     }
     .home .home-content a{
-        
+
         font-size: 20px;
         padding: 8px 25px;
+    }
+    .contact .right form .button{
+        height: 35;
+        width: 130px;
+    }
+    .contact .right form .button button{
+        font-size: 17px;
     }
 }
 
@@ -488,7 +595,7 @@ section .title::after{
         width: 100%;
         margin-bottom: 15px;
     }
-    
+
 }
 
 @media (max-width: 441px){
@@ -496,10 +603,11 @@ section .title::after{
         font-size: 16px;
         bottom: -10px;
     }
-    .skill .title::after{
+    .skill .title::after,
+    .contact .title::after{
         font-size: 15px;
         bottom: -10px;
-        
+
     }
 }
 @media (max-width: 347px){
